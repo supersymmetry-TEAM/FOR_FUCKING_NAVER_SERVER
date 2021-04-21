@@ -1,0 +1,15 @@
+{% extends "admin/change_list.html" %}
+{% load static %}
+{% block content %}
+
+<h1>Send PushNotification!</h1>
+<div id="Box_1">
+<form  method="post">{{ csrf_input }}
+{% csrf_token %}
+{{form}}
+<input type = "submit">
+</form>
+</div>
+<!-- Render the rest of the ChangeList view by calling block.super -->
+{{ block.super }}
+{% endblock %}
